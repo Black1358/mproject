@@ -1,0 +1,24 @@
+:root {
+    --pd:0.75rem;
+    --b-card:40px;
+    --card:28px;
+    --h1:29px;
+    --txt:16px;
+}
+@media (max-width:1750px){
+    :root{
+        --res:calc((100vw - 750px) / (1750 - 620));
+        --b-card:calc(var(--res) * (40 - 18) + 18px);
+        --card:calc(var(--res) * (28 - 14) + 13px);
+        --h1:calc(var(--res) * (29 - 19) + 19px);
+        --txt:calc(var(--res) * (16 - 14) + 14px);
+    }
+}
+@media (max-width:620px){
+    :root{
+        --b-card:18px;
+        --card:13px;
+        --h1:19px;
+        --txt:14px;
+    }
+}

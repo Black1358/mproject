@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="theme-color" content="#0D264A">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="МП">
+		<meta name="apple-mobile-web-app-title" content="МП">
+		<meta name="msapplication-navbutton-color" content="#0D264A">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="msapplication-starturl" content="/">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" href="/favicon.ico" sizes="any">
+		<link rel="icon" href="/icon.svg" type="image/svg+xml">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="yandex-tableau-widget" href="/tableau.json">
+		<link rel='stylesheet' href='/fonts/calibri/stylesheet.css'>
+		<link rel='stylesheet' href='/fonts/lato/stylesheet.css'>
+		<style>html{-webkit-transition:background-color .3s linear;-o-transition:background-color .3s linear;transition:background-color .3s linear}</style>
+		<script>"dark"===localStorage.theme||!("theme"in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches?document.documentElement.setAttribute("data-theme","light") :document.documentElement.setAttribute("data-theme","light")</script>
+			%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display:contents">%sveltekit.body%</div>
+	</body>
+</html>

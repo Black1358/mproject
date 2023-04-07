@@ -1,0 +1,88 @@
+@import "/src/lib/adreano/scss/varibles.scss";
+.product-list{max-width: 1030px;gap: $pd;grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))}
+@media (max-width: 775px) {.product-list{grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));gap:9px;}}
+.product-card {
+  @apply column bgw bor lg:p-4 p-2.5 gap-1.5;
+  .screen{
+    @apply column relative;
+    .preview {@apply w-full rounded-lg}
+    .labels {
+      flex-direction: column;
+      position: absolute;
+      width: 21.5%;
+      min-width: 40px;
+      @apply gap-1.5 -top-1 -right-1;
+    }
+  }
+  .sale-label{position:absolute;width:16%;@apply -top-3 -left-2}
+  .sale-hook{position:relative;top:0;left:47%;width:18%;height:auto;z-index:2}
+  .sale-icon{position:relative;margin-top:-18%;left:6%;width:90%;transform-origin:50% 10%;height:auto;z-index:1;animation:rotate-sale 2.5s linear infinite}
+  .cash{
+    position:absolute;
+    @apply -bottom-1 -left-px bgw flex v-center;
+    height: 20px;
+    gap: 2px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0.25em 6px 0.25em 0;
+    border-bottom-right-radius: 0;
+    img {
+      width: 16px;
+      height: 27px;
+      margin-top: -5px;
+      margin-left: -2px;
+    }
+  }
+  .control {
+    margin-left: -2px;
+    margin-right: -2px;
+    width: calc(100% + 4px);
+    @apply column gap-1.5;
+    .title {
+      @apply font-bold;
+      color: $main;
+      line-height: 110%;
+    }
+    .price-zone {
+      background: $alt-main;
+      @apply rounded-lg p-px;
+
+      .main-price {
+        @apply font-bold text-lg;
+      }
+
+      .currency {
+        @apply inline-block pl-1;
+      }
+    }
+    .btn-icon {
+      background: $alt-accent;
+      @apply rounded-lg;
+
+      svg {
+        height: 36px;
+        width: 36px;
+        padding: 9px;
+        fill:$el-accent;
+      }
+    }
+  }
+}
+@keyframes rotate-sale {
+  0% {
+    transform: rotate(0deg);
+    filter: drop-shadow(0px 7px 2.5px rgba(0, 0, 0, 0.25));
+  }
+  25% {
+    transform: rotate(45deg);
+    filter: drop-shadow(8px 4px 2px rgba(0, 0, 0, 0.25));
+  }
+  50%, 100% {
+    transform: rotate(0deg);
+    filter: drop-shadow(0px 7px 2.5px rgba(0, 0, 0, 0.25));
+  }
+  75% {
+    transform: rotate(-45deg);
+    filter: drop-shadow(-8px 4px 3px rgba(0, 0, 0, 0.25));
+  }
+}

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "adreano/adreano.css";
+//@import "atropos/atropos.scss";
+//@import "swiper/swiper-bundle.min.css";
+@import "adreano/scss/custom.scss";
+@import "adreano/scss/product.scss";
+
+.cropper-container {
+  width: 100% !important;
+  @apply rounded-lg;
+  overflow: hidden;
+}
+a.btn {
+  color: white;
+}

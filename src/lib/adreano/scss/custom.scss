@@ -1,0 +1,71 @@
+@import "/src/lib/adreano/scss/varibles.scss";
+@media (min-width:$tw) and (min-height:$th) {.desk-none{display:none!important}}
+@media (max-width:$tw) or (max-height:$th) {.mob-none{display:none!important}}
+.checkbox-accent {--chkbg: 21,53.8%,94.9%;--chkfg: 22,35.6%,40.2%}
+@layer utilities {
+  .bgw{background:white}
+  .bga{background:#e2b59c}
+
+  .bor{border:1px #eee solid}
+  .split-bor{border:1px #eee solid}
+  .g-pd{gap:var(--pd)}
+  .p-pd{padding:var(--pd)}
+  .g-card{gap:var(--card)}
+  .p-card{padding:var(--card)}
+  .g-b-card{gap:var(--b-card)}
+  .p-b-card{padding:var(--b-card)}
+  .product-list{@apply grid w-full sm:w-11/12 calibri s-center}
+}
+
+.toaster{z-index:99!important}
+.toaster{left:calc(var(--sidebar) + $pd) !important;}
+
+main.classic, main.header, main.full, main.mobile{@apply max-w-full fcc l-ui}
+main.classic{min-height:calc(100vh - var(--card) * 2)}
+main.header{min-height:calc(100vh - var(--card) * 2 - var(--header, 0))}
+main.full{height:calc(100vh - var(--card) * 2)}
+main.full-header{height:calc(100vh - var(--card) * 2 - var(--header, 0))}
+main.mobile{min-height:calc(100vh - var(--card) * 2)}
+
+@media (orientation:portrait) and (max-width:$tw){
+  .toaster{left:var(--default-offset)!important;bottom: calc(var(--sidebar) + $pd) !important;}
+  main.classic{min-height:calc(100vh - var(--card) * 2  - var(--sidebar))}
+  main.header{min-height:calc(100vh - var(--card) * 2  - var(--header, 0) - var(--header, 0))}
+  main.full{height:calc(100vh - var(--card) * 2  - var(--sidebar))}
+  main.full-header{min-height:calc(100vh - var(--card) * 2  - var(--header, 0) - var(--header, 0))}
+  .mhv{min-height:calc(100vh - var(--card) * 2  - var(--sidebar))}
+}
+@media (orientation:portrait) and (max-width: 685px) {
+  main.mobile{
+    min-height:100vh;
+    max-width:unset;
+    width:100vw;
+    margin: calc(-1 * var(--card)) 0 calc(-1 * (var(--sidebar) + var(--card))) calc(-1 * var(--card));
+    padding-bottom:var(--sidebar);
+    overflow: hidden;
+  }
+
+}
+
+.page{@apply column max-w-full w-full sm:w-auto}
+
+.btn-icon{
+  background:$alt-accent;
+  fill:$el-accent;
+  color:$el-accent;
+  width:36px;
+  height:36px;
+  padding:5px;
+  @apply fcc rounded-lg e-ui;
+  &:hover{background:$el-accent;fill:$alt-accent;color:$alt-accent;}
+}
+.CDEK-widget__sidebar-button_phone, .ymaps-2-1-79-gotoymaps__text-container,
+.CDEK-widget__delivery-type__button, .CDEK-widget__search, .CDEK-widget__logo{display: none!important;}
+.ymaps-2-1-79-search {
+  max-width: calc(89vw - 60px)!important;
+}
+.ymaps-2-1-79-gotoymaps {
+  margin-left: 7px!important;
+}
+.ymaps-2-1-79-zoom {transform: translateY(50%)!important;}
+.ymaps-2-1-79-float-button-icon {height:17px!important;}

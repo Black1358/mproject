@@ -1,0 +1,5 @@
+@layer base {
+    *{scrollbar-width:none;-webkit-tap-highlight-color:transparent}
+    ::-webkit-scrollbar{width:0}
+    body{font-size: var(--txt)}
+}

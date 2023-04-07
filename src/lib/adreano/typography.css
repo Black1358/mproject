@@ -1,0 +1,52 @@
+@layer utilities {
+    .calibri{font-family:Calibri,sans-serif}
+    .t-cut{overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;white-space:nowrap}
+    .lh-c{line-height:115%}
+    .lh-b{line-height:135%}
+}
+@layer base {
+    h1,h2,h3,h4,h5,h6{text-align:center;font-weight:700}
+    h1{font-size:var(--h1)}
+    a{color:#8B5D42;@apply e-ui;font-weight:600}
+    a:hover,a:focus{color:#e2b59c}
+}
+:root {
+    --min-font-size: 14px;
+    --max-font-size: 28px;
+    --min-screen: 320px;
+    --max-screen: 1440px;
+    --resolution: calc((100vw - var(--min-screen)) / (var(--max-screen) - var(--min-screen)));
+    --h2: calc((var(--min-font-size) * 0.83) + ((var(--max-font-size) * 0.83) - (var(--min-font-size) * 0.83)) * var(--resolution));
+    --h3: calc((var(--min-font-size) * 0.67) + ((var(--max-font-size) * 0.67) - (var(--min-font-size) * 0.67)) * var(--resolution));
+    --p-li: calc((var(--min-font-size) * 0.75) + ((var(--max-font-size) * 0.75) - (var(--min-font-size) * 0.75)) * var(--resolution));
+    --h4: calc((var(--min-font-size) * 0.5) + ((var(--max-font-size) * 0.5) - (var(--min-font-size) * 0.5)) * var(--resolution));
+    --page-container-width: calc(100% - (100% - 990px) * var(--resolution));
+}
+
+/* Утилиты для заголовков */
+
+
+.h2 {
+    font-size: var(--h2);
+}
+
+.h3 {
+    font-size: var(--h3);
+}
+
+.h4 {
+    font-size: var(--h4);
+}
+
+/* Утилиты для тегов p, li */
+p,
+li {
+    font-size: var(--p-li);
+}
+
+/* Класс page-container */
+.page-container {
+    max-width: var(--page-container-width);
+    margin: 0 auto;
+}
+

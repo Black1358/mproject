@@ -1,0 +1,4 @@
+@layer utilities {
+    .l-ui{-webkit-transition:all .25s linear;-o-transition:all .25s linear;-moz-transition:all .25s linear;transition:all .25s linear}
+    .e-ui{-webkit-transition:all .2s linear;-o-transition:all .2s linear;-moz-transition:all .2s linear;transition:all .2s linear}
+}

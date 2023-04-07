@@ -1,0 +1,34 @@
+@layer utilities {
+    .fcc{@apply justify-center}
+    .fcc,.fccc,.fsbc,.fsbcc{@apply flex items-center}
+    .fccc{@apply flex-col justify-center}
+    .fsbc,.fsbcc{@apply justify-between}
+    .fsbcc{@apply flex-col}
+
+    .column{@apply flex flex-col}
+    .wrap{@apply flex-wrap}
+
+    .g-start{@apply justify-start}
+    .g-end{@apply justify-end}
+    .g-center{@apply justify-center}
+    .g-sb{@apply justify-between}
+    .g-around{@apply justify-around}
+    .g-evenly{@apply justify-evenly}
+
+    .v-start{@apply items-start}
+    .v-end{@apply items-end}
+    .v-center{@apply items-center}
+    .v-baseline{@apply items-baseline}
+    .v-stretch{@apply items-stretch}
+
+    .s-start{@apply self-start}
+    .s-end{@apply self-end}
+    .s-center{@apply self-center}
+    .s-stretch{@apply self-stretch}
+    .s-baseline{@apply self-baseline}
+
+    .f-g1{@apply grow}
+    .f-g0{@apply grow-0}
+    .f-s1{@apply shrink}
+    .f-s0{@apply shrink-0}
+}

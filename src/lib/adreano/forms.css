@@ -1,0 +1,8 @@
+.input-icon .label-container{padding: 0 3px;margin-bottom: -1px;font-size:0.9rem}
+.input-icon .icon-container {left:9px; top:9px; @apply absolute;}
+.input-icon .input-custom{height: 38px; padding: 8px 8px 8px 38px; @apply w-full text-gray-700 bg-white border border-gray-300 rounded-lg outline-none;}
+.input-icon .input-custom.error {@apply border-red-500;}
+.input-icon .input-custom.success { @apply border-green-500;}
+.error-text {
+    color: tomato;
+}
